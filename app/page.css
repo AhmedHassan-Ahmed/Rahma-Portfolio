@@ -1,0 +1,19 @@
+.hero-title {
+  font-size: 40px; /* mobile */
+  text-align: center;
+}
+
+/* tablet (starts at 1200px) */
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 55px;
+    text-align: left;
+  }
+}
+
+/* desktop (bigger screens) */
+@media (min-width: 1400px) {
+  .hero-title {
+    font-size: 70px;
+  }
+}

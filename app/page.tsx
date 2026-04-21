@@ -1,12 +1,12 @@
-'use client';
-
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import Navigation from '@/components/Navigation';
-import ProjectCard from '@/components/ProjectCard';
-import Footer from '@/components/Footer';
-import { projects } from '@/data/projects';
+"use client";
+import './page.css';
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import Navigation from "@/components/Navigation";
+import ProjectCard from "@/components/ProjectCard";
+import Footer from "@/components/Footer";
+import { projects } from "@/data/projects";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -44,26 +44,28 @@ export default function Home() {
           {/* Text Content */}
           <motion.div className="order-2 md:order-1" variants={itemVariants}>
             <motion.h1
-              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight text-balance"
+              className="hero-title text-center md:text-left font-bold text-white mb-6 leading-tight text-balance"
               variants={itemVariants}
             >
               RAHMA HASSAN
             </motion.h1>
             <motion.p
-              className="text-xl md:text-2xl text-white/80 mb-4 font-light"
+              className="text-xl md:text-2xl text-white/80 mb-4 font-light text-center md:text-left"
               variants={itemVariants}
             >
               Creative Designer & Digital Artist
             </motion.p>
+
             <motion.p
-              className="text-base md:text-lg text-white/70 mb-8 max-w-lg leading-relaxed"
+              className="text-base md:text-lg text-white/70 mb-8 max-w-lg mx-auto leading-relaxed text-center md:text-left md:mx-0"
               variants={itemVariants}
             >
-              Crafting beautiful, innovative digital experiences through strategic design and creative excellence.
+              Crafting beautiful, innovative digital experiences through
+              strategic design and creative excellence.
             </motion.p>
 
             <motion.div
-              className="flex gap-4 flex-wrap"
+              className="flex gap-4 flex-wrap justify-center md:justify-start"
               variants={itemVariants}
             >
               <Link href="/projects">
@@ -114,8 +116,18 @@ export default function Home() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <svg className="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          <svg
+            className="w-6 h-6 text-white/50"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
           </svg>
         </motion.div>
       </section>
@@ -133,7 +145,8 @@ export default function Home() {
               Featured Projects
             </h2>
             <p className="text-white/70 text-lg mb-12 max-w-2xl">
-              A selection of recent work showcasing creative design and innovative solutions.
+              A selection of recent work showcasing creative design and
+              innovative solutions.
             </p>
           </motion.div>
 
@@ -185,7 +198,8 @@ export default function Home() {
               Ready to Create Something Amazing?
             </h2>
             <p className="text-white/70 text-lg mb-8">
-              Let&apos;s collaborate on your next project. Get in touch to discuss your vision.
+              Let&apos;s collaborate on your next project. Get in touch to
+              discuss your vision.
             </p>
             <Link href="/contact">
               <motion.button
