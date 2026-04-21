@@ -1,10 +1,19 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Bebas_Neue, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+// Fonts
+const bebas = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-bebas',
+})
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-geist-mono',
+})
 
 export const metadata: Metadata = {
   title: 'Rahma Hassan - Portfolio',
@@ -31,12 +40,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="font-sans antialiased overflow-x-hidden" style={{ backgroundImage: 'url(/background.png)', backgroundAttachment: 'fixed', backgroundSize: 'cover' }}>
+      <body
+        className={`${bebas.className} ${geistMono.variable} antialiased overflow-x-hidden`}
+        style={{
+          backgroundImage: 'url(/background.png)',
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+        }}
+      >
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

@@ -1,5 +1,5 @@
 "use client";
-import './page.css';
+import "./page.css";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -50,14 +50,14 @@ export default function Home() {
               RAHMA HASSAN
             </motion.h1>
             <motion.p
-              className="text-xl md:text-2xl text-white/80 mb-4 font-light text-center md:text-left"
+       className="text-2xl md:text-[35px] text-white/80 mb-4 font-light text-center md:text-left"
               variants={itemVariants}
             >
               Creative Designer & Digital Artist
             </motion.p>
 
             <motion.p
-              className="text-base md:text-lg text-white/70 mb-8 max-w-lg mx-auto leading-relaxed text-center md:text-left md:mx-0"
+              className="text-base md:text-lg lg:text-[25px] text-white/70 mb-8 max-w-lg mx-auto leading-relaxed text-center md:text-left md:mx-0"
               variants={itemVariants}
             >
               Crafting beautiful, innovative digital experiences through
@@ -70,7 +70,7 @@ export default function Home() {
             >
               <Link href="/projects">
                 <motion.button
-                  className="px-8 py-3 rounded-lg bg-white/20 hover:bg-white/30 text-white font-semibold backdrop-blur-sm border border-white/30 transition-all"
+                  className="px-8 py-3 rounded-lg bg-white/20 hover:bg-white/30 text-white text-[20px] font-semibold backdrop-blur-sm border border-white/30 transition-all"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -79,7 +79,7 @@ export default function Home() {
               </Link>
               <Link href="/contact">
                 <motion.button
-                  className="px-8 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold backdrop-blur-sm border border-white/20 transition-all"
+                  className="px-8 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-[20px] text-white font-semibold backdrop-blur-sm border border-white/20 transition-all"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -95,7 +95,8 @@ export default function Home() {
             variants={itemVariants}
           >
             <motion.div
-              className="relative w-72 h-96 md:w-96 md:h-[500px] rounded-2xl overflow-hidden backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl"
+              className="rahma relative 
+               rounded-2xl overflow-hidden"
               whileHover={{ y: -10 }}
               transition={{ duration: 0.5 }}
             >
@@ -103,7 +104,7 @@ export default function Home() {
                 src="/rahma.png"
                 alt="Rahma Hassan"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-center pb-10 md:pb-0"
                 priority
               />
             </motion.div>

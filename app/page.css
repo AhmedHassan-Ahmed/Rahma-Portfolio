@@ -1,19 +1,44 @@
 .hero-title {
-  font-size: 40px; /* mobile */
+  font-size: 60px; 
   text-align: center;
 }
 
-/* tablet (starts at 1200px) */
-@media (min-width: 1200px) {
-  .hero-title {
-    font-size: 55px;
-    text-align: left;
+  .rahma {
+    width: 450px;
+    height: 330px;
+  }
+
+
+@media (min-width: 764px) {
+  .rahma {
+    width: 450px;
+    height: 550px;
   }
 }
 
-/* desktop (bigger screens) */
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 75px;
+
+    text-align: start;
+  }
+
+}
+@media (min-width: 900px) {
+  .hero-title {
+       font-size: 75px;
+  text-align: start;
+  }
+}
+
 @media (min-width: 1400px) {
   .hero-title {
     font-size: 70px;
+      text-align: start;
+  }
+    .rahma {
+    width: 700px;
+    height: 800px;
   }
 }
